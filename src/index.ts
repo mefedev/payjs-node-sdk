@@ -1,5 +1,3 @@
-import 'reflect-metadata'
-
 import { PayJS } from './payjs'
 
 export * from './interfaces/options'
