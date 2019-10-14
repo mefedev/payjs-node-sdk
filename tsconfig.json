@@ -1,0 +1,60 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    // 基础配置
+    "charset": "utf8",
+    "target": "ES2017",
+    "module": "commonjs",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+
+    "outDir": "./dist",
+    "incremental": true,
+    "tsBuildInfoFile": ".vscode/.tsbuildinfo",
+
+    // 助手函数
+    "importHelpers": true,
+    "noEmitHelpers": true,
+
+    // 类型检查
+    "strict": true,
+    "noImplicitAny": true,
+    "strictBindCallApply": false,
+    "noImplicitThis": true,
+    "alwaysStrict": false,
+    "noImplicitUseStrict": true,
+    "strictPropertyInitialization": false,
+
+    // cli 参数
+    "pretty": true,
+
+    // 附加检查
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+
+    // 模块解析
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+
+    // 源映射
+    "inlineSources": true,
+
+    // 实验支持
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules*",
+    "dist",
+    "test",
+    "**/*.d.ts",
+    "**/*.spec.ts"
+  ]
+}

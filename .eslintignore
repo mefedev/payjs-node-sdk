@@ -1,0 +1,10 @@
+.history
+.vscode
+
+node_modules
+
+coverage/
+dist/
+run/
+
+ecosystem.config.js

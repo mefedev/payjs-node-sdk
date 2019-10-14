@@ -1,0 +1,82 @@
+{
+  "name": "@mefedev/payjs-node-sdk",
+  "version": "0.0.0",
+  "description": "A node.js implementation of the Payjs SDK",
+  "keywords": [
+    "payjs",
+    "nodejs",
+    "sdk"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "watch": "tsc -p tsconfig.json -w --preserveWatchOutput",
+    "doc": "typedoc --out dist-docs ./src",
+    "lint": "eslint \"{src,test}/**/*.ts\"",
+    "test": "jest",
+    "ci": "jest --coverage && cat ./coverage/lcov.info | coveralls",
+    "clean": "rimraf .vscode/.tsbuildinfo dist dist-docs",
+    "preversion": "npm run lint",
+    "prepare": "npm run clean && npm run build"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "linters": {
+      "*.ts": [
+        "eslint --fix",
+        "git add"
+      ]
+    },
+    "ignore": []
+  },
+  "files": [
+    "dist",
+    "CHANGELOG.md"
+  ],
+  "dependencies": {
+    "axios": "^0.19.0",
+    "extend": "^3.0.2",
+    "reflect-metadata": "^0.1.13",
+    "tslib": "^1.10.0"
+  },
+  "devDependencies": {
+    "@types/extend": "^3.0.1",
+    "@types/jest": "^24.0.18",
+    "@types/node": "^10.5.5",
+    "@typescript-eslint/eslint-plugin": "^2.1.0",
+    "@typescript-eslint/parser": "^2.1.0",
+    "eslint": "^6.3.0",
+    "eslint-config-prettier": "^6.2.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "husky": "^3.0.5",
+    "jest": "^24.9.0",
+    "lint-staged": "^9.2.5",
+    "power-assert": "^1.6.1",
+    "prettier": "^1.18.2",
+    "rimraf": "^3.0.0",
+    "ts-jest": "^24.0.2",
+    "typedoc": "^0.15.0",
+    "typescript": "^3.6.2"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "homepage": "https://github.com/mefedev/payjs-node-sdk",
+  "bugs": {
+    "url": "https://github.com/mefedev/payjs-node-sdk/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mefedev/payjs-node-sdk.git"
+  },
+  "author": {
+    "name": "mefedev",
+    "email": "mefedev@foxmail.com"
+  },
+  "license": "MIT"
+}

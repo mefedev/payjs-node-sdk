@@ -1,0 +1,107 @@
+{
+  "telemetry.enableCrashReporter": false,
+  "telemetry.enableTelemetry": false,
+  "search.followSymlinks": false,
+  "search.useIgnoreFiles": true,
+  "search.exclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/.tsbuildinfo": true,
+    "**/.tsbuildinfo.*": true,
+    "**/.history": true,
+    "**/node_modules/**": true,
+    "**/node_modules*/**": true,
+    "dist/**": true,
+    "coverage/**": true,
+    "dist-docs/**": true
+  },
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1500,
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "files.eol": "\n",
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/.history": true,
+    "**/node_modules": true,
+    "package-lock.json": true,
+    "**/*.map": true,
+    "**/*.js": {
+      "when": "$(basename).ts"
+    }
+  },
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/.history/**": true,
+    "**/node_modules/**": true,
+    "dist/**": true,
+    "coverage/**": true,
+    "dist-docs/**": true
+  },
+  "eslint.autoFixOnSave": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    {
+      "language": "typescript",
+      "autoFix": true
+    },
+    {
+      "language": "typescriptreact",
+      "autoFix": true
+    }
+  ],
+  "[javascript]":  {
+    "editor.formatOnSave":  false,
+  },
+  "[javascriptreact]":  {
+    "editor.formatOnSave":  false,
+  },
+  "[typescript]":  {
+    "editor.formatOnSave":  false,
+  },
+  "[typescriptreact]":  {
+    "editor.formatOnSave":  false,
+  },
+  "npm-intellisense.importES6": true,
+  "npm-intellisense.importQuotes": "'",
+  "npm-intellisense.importLinebreak": "\r\n",
+  "npm-intellisense.importDeclarationType": "const",
+  "npm-intellisense.packageSubfoldersIntellisense": false,
+  "cSpell.ignorePaths": [
+    "node_modules",
+    ".history",
+    ".vscode",
+    "dist",
+    "coverage",
+    "dist-docs",
+    "CHANGELOG.md",
+    "package-lock.json",
+    "yarn.lock"
+  ],
+  "cSpell.ignoreWords": [
+    "preversion",
+    "cnpm",
+    "repo",
+    "editorconfig",
+    "modulemap",
+    "esnext",
+    "tslib",
+    "hashlib",
+    "tsbuildinfo",
+    "openid",
+    "typedoc",
+    "camelcase",
+    "nojekyll",
+    "lcov",
+    "mefedev",
+    "payjs",
+    "foxmail",
+    "wechat",
+    "jsapi",
+    "mchid",
+    "micropay"
+  ]
+}
