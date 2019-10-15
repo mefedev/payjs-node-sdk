@@ -15,11 +15,11 @@ $ npm install @mefedev/payjs-node-sdk --save
 
 **支付二维码**
 
-![payment qrcode](./screenshots/paycode.png)
+<img src="./screenshots/paycode.png" width="280">
 
 **微信扫码截图**
 
-![payment qrcode](./screenshots/wechat_scan_result.jpg)
+<img src="./screenshots/wechat_scan_result.jpg" width="280">
 
 ## 使用
 
