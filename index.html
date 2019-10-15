@@ -74,6 +74,13 @@
 					<h2>安装</h2>
 				</a>
 				<pre><code class="language-bash">$ npm install @mefedev/payjs-node-sdk --save</code></pre>
+				<a href="#演示" id="演示" style="color: inherit; text-decoration: none;">
+					<h2>演示</h2>
+				</a>
+				<p><strong>支付二维码</strong></p>
+				<img src="./screenshots/paycode.png" width="280">
+				<p><strong>微信扫码截图</strong></p>
+				<img src="./screenshots/wechat_scan_result.jpg" width="280">
 				<a href="#使用" id="使用" style="color: inherit; text-decoration: none;">
 					<h2>使用</h2>
 				</a>
@@ -97,17 +104,17 @@
   <span class="hljs-attr">out_trade_no</span>: <span class="hljs-string">'内部系统订单'</span>
 })
 
-<span class="hljs-comment">// 支付收银台</span>
-<span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> sdk.payment.cashier({
-  <span class="hljs-attr">total_fee</span>: <span class="hljs-number">100</span>,
-  <span class="hljs-attr">out_trade_no</span>: <span class="hljs-string">'内部系统订单'</span>
-})
-
 <span class="hljs-comment">// JS API 支付</span>
 <span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> sdk.payment.jsPay({
   <span class="hljs-attr">total_fee</span>: <span class="hljs-number">100</span>,
   <span class="hljs-attr">out_trade_no</span>: <span class="hljs-string">'内部系统订单'</span>,
   <span class="hljs-attr">openid</span>: <span class="hljs-string">'微信 openid'</span>
+})
+
+<span class="hljs-comment">// 获取收银台地址</span>
+<span class="hljs-keyword">const</span> redirectUri = sdk.payment.getCashierUri({
+  <span class="hljs-attr">total_fee</span>: <span class="hljs-number">100</span>,
+  <span class="hljs-attr">out_trade_no</span>: <span class="hljs-string">'内部系统订单'</span>
 })</code></pre>
 				<p><strong>订单接口</strong></p>
 				<pre><code class="language-javascript"><span class="hljs-keyword">import</span> PayJS <span class="hljs-keyword">from</span> <span class="hljs-string">'@mefedev/payjs-node-sdk'</span>
