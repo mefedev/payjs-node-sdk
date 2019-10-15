@@ -26,13 +26,10 @@
     }
   },
   "lint-staged": {
-    "linters": {
-      "*.ts": [
-        "eslint --fix",
-        "git add"
-      ]
-    },
-    "ignore": []
+    "*.ts": [
+      "eslint --fix",
+      "git add"
+    ]
   },
   "files": [
     "dist",
