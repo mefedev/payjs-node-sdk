@@ -33,12 +33,14 @@ export class PaymentApi {
   }
 
   /**
-   * 收银台
+   * 获取收银台地址
    *
    * @param options
+   *
+   * @returns 返回收银台链接地址
    */
-  async cashier(options: ICashierPaymentOptions): Promise<any> {
-    return this.sdk.request('POST', '/api/cashier', options)
+  getCashierUri(options: ICashierPaymentOptions): string {
+    return this.sdk.getUri('/api/cashier', options)
   }
 
   /**

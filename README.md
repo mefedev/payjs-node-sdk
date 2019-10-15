@@ -45,17 +45,17 @@ const result = await sdk.payment.microPay({
   out_trade_no: '内部系统订单'
 })
 
-// 支付收银台
-const result = await sdk.payment.cashier({
-  total_fee: 100,
-  out_trade_no: '内部系统订单'
-})
-
 // JS API 支付
 const result = await sdk.payment.jsPay({
   total_fee: 100,
   out_trade_no: '内部系统订单',
   openid: '微信 openid'
+})
+
+// 获取收银台地址
+const redirectUri = sdk.payment.getCashierUri({
+  total_fee: 100,
+  out_trade_no: '内部系统订单'
 })
 ```
 

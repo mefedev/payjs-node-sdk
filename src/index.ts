@@ -5,4 +5,6 @@ export * from './interfaces/merchant'
 export * from './interfaces/payment'
 export * from './interfaces/order'
 
+export { PayJS }
+
 export default PayJS

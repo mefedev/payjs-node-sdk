@@ -94,14 +94,12 @@ export class PayJS {
    * 获取 URI
    *
    * @param path    路径片段
-   * @param params  url 参数
+   * @param data  url 参数
    */
-  public getUri(path: string, params?: any): string {
+  public getUri(path: string, data?: any): string {
     const baseURL = this.client.defaults.baseURL
     const url = new URL(path, baseURL)
-    const urlParams = new URLSearchParams(
-      Object.assign({ mchid: this.mchId }, params)
-    )
+    const urlParams = new URLSearchParams(this.genPostData(data))
 
     // 覆盖查询条件
     url.search = urlParams.toString()
@@ -123,20 +121,29 @@ export class PayJS {
     data: { [key: string]: any } = {},
     config?: AxiosRequestConfig
   ): Promise<T> {
-    // 添加商户id
-    data.mchid = this.mchId
-
-    // 添加签名
-    data.sign = this.genSign(data)
-
     // 发起请求
     return this.client.request(
       extend({}, config, {
         method: method,
         url: path,
-        [isPostRequest(method) ? 'data' : 'params']: data
+        [isPostRequest(method) ? 'data' : 'params']: this.genPostData(data)
       })
     )
+  }
+
+  /**
+   * 生成请求数据
+   *
+   * @param params   接口参数
+   */
+  public genPostData(params: { [key: string]: any } = {}): any {
+    // 添加商户id
+    params.mchid = this.mchId
+
+    // 添加签名
+    params.sign = this.genSign(params)
+
+    return params
   }
 
   /**
