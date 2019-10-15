@@ -11,15 +11,17 @@
 $ npm install @mefedev/payjs-node-sdk --save
 ```
 
-## 演示
+## 演示（ 仅支持微信 ）
 
-**支付二维码**
+<img src="./screenshots/qrcode.png" width="280">
 
-<img src="./screenshots/paycode.png" width="280">
+[演示地址](http://zhengxs.cn/pay/demo)请在微信浏览器打开
 
-**微信扫码截图**
+**屏幕截图**
 
-<img src="./screenshots/wechat_scan_result.jpg" width="280">
+<img src="./screenshots/step1.jpg" width="280">
+
+<img src="./screenshots/step2.jpg" width="280">
 
 ## 使用
 
